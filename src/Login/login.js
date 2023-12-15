@@ -3,14 +3,13 @@ import { Style } from "./Style";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
 
+let ali = document.getElementsByClassName("int").value;
 export default function Login() {
   const [userName, setUser] = useState();
   const [pas, setPasCode] = useState();
-  const [loginSucces, setLoginSuess] = useState(false);
   const [loading, setLoading] = useState(false);
-
   const navigate = useNavigate();
-
+  
   function post() {
     setLoading(true);
 
@@ -25,18 +24,26 @@ export default function Login() {
       },
       body: data,
     })
-      .then((response) => response.json())
+    .then((response) => response.json())
       .then((resualt) => {
-        setLoginSuess(true);
         setLoading(false);
         let token = resualt.refresh;
         if (token) {
+          
           alert("Login sucesss");
           localStorage.setItem("Token", resualt.refresh);
           localStorage.setItem("Access", resualt.access);
           navigate("/home");
         } else {
           alert("Login failed");
+          fail()
+        }
+        function fail() {
+          return (
+            <div className="aler-form">
+              <p>Login failed</p>
+            </div>
+          )
         }
       });
   }
@@ -58,6 +65,7 @@ export default function Login() {
           <h3>Alborz Develop part</h3>
           <div className="inputs">
             <input
+              className="int"
               type="text"
               onChange={(e) => {
                 setUser(e.target.value);
