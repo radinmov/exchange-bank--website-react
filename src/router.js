@@ -16,6 +16,11 @@ const routes = createBrowserRouter([
     element: <Login />,
   },
   {
+    path: "/Home",
+    element: <Homepage />,
+  },
+
+  {
     path: "*",
     element: <NotFound />,
   },

@@ -1,15 +1,16 @@
 import { useState } from "react";
 import { Style } from "./Style";
 import { useNavigate } from "react-router-dom";
+import "./index.css";
 
 export default function Login() {
   const [userName, setUser] = useState();
   const [pas, setPasCode] = useState();
+  const [loginSucces, setLoginSuess] = useState(false);
   const [loading, setLoading] = useState(false);
 
-
   const navigate = useNavigate();
-  
+
   function post() {
     setLoading(true);
 
@@ -26,22 +27,23 @@ export default function Login() {
     })
       .then((response) => response.json())
       .then((resualt) => {
-       
+        setLoginSuess(true);
         setLoading(false);
-        let token = resualt.refresh
+        let token = resualt.refresh;
         if (token) {
-          localStorage.setItem("Token",resualt.refresh);
-          localStorage.setItem("Access",resualt.access);
-          navigate("/home")
-
+          alert("Login sucesss");
+          localStorage.setItem("Token", resualt.refresh);
+          localStorage.setItem("Access", resualt.access);
+          navigate("/home");
+        } else {
+          alert("Login failed");
         }
-      })
-      // .catch((err) => console.log(err));
+      });
   }
   return (
     <Style>
       <div className="box-form">
-        <div className="left">
+        <div className="left-2">
           <div className="overlay">
             <h1>Code Academy</h1>
             <p>
@@ -51,7 +53,7 @@ export default function Login() {
           </div>
         </div>
 
-        <div className="right">
+        <div className="right-2">
           <h5>Login</h5>
           <h3>Alborz Develop part</h3>
           <div className="inputs">
@@ -71,22 +73,9 @@ export default function Login() {
               placeholder="password"
             />
           </div>
-
-          <div className="remember-me--forget-password">
-            <label>
-              <input
-                onChange={(e) => {
-                  setUser(e.target.value);
-                }}
-                type="checkbox"
-                name="item"
-                checked
-              />
-              <span className="text-checkbox">Remember me</span>
-            </label>
-            <p>forget password?</p>
-          </div>
-          <button  onClick={post}>{loading ? "Loading...." : "Login"}</button>
+          <button className="btn bg-cyan-500 " onClick={post}>
+            {loading ? "Loading...." : "Login"}
+          </button>
         </div>
       </div>
     </Style>
