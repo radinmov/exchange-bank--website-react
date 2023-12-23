@@ -1,5 +1,6 @@
 import { Style } from "./style";
 import "./index.css"
+import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
@@ -14,7 +15,10 @@ export default function Header() {
                 <button className="mr-4 text-xl">Home</button>
                 <button className="mr-4 text-xl"> service</button>
                 <button className="mr-4 text-xl">About</button>
-                <button className="mr-4 text-xl">Deveolop</button>
+                <button className="mr-4 text-xl"></button>
+            <Link target="__blanck" to={"http://ins-alborz.com"}>    
+             <button className="mr-4 text-xl">Deveolop</button>
+             </Link> 
             </div>
         </div>
         </Style>
