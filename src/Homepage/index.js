@@ -1,6 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import { useState, useEffect, Fragment } from "react";
 import { Style } from "./style";
+import Header_2 from "../Header_2";
 
 export default function Homepage() {
   const [amout, setAmount] = useState();
@@ -29,18 +30,12 @@ export default function Homepage() {
         setAmount(result.amount);
       })
       .catch((err) => console.log(err));
-  }, []);
-  return (
-   <Style >
-    <div className="fh_card">
-    <div className="card" >
-      <div className="card_inner" >
-        <h1>Alborz Bank</h1>
-      <p className="amount">Amount:{amout}</p>
-      <p className="amount">Account Number :{account}</p>
-      </div>
-      </div>
-      </div>
+    }, []);
+    return (
+      <Style >
+     <Header_2 />
+
+
    </Style>
   );
 }
