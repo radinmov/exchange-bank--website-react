@@ -5,8 +5,8 @@ export default function Header_2() {
   return (
     <Style>
       <div className="container_left">
-        <div className="container_inner">
             <h1 className="title">Alborz Bank </h1>
+        <div className="container_inner">
             <Link>OverView</Link>
             <Link>Profile</Link>
             <Link>Wallet</Link>
