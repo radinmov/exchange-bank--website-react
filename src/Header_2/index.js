@@ -12,6 +12,7 @@ export default function Header_2() {
             <Link>Wallet</Link>
         </div>
       </div>
+      
     </Style>
   );
 }
