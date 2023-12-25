@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Style } from "./style";
 
 export default function Header_2() {
+  
   return (
     <Style>
       <div className="container_left">

@@ -15,7 +15,7 @@ body, button, input {
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    color: #fff;
+    // color: #fff;
     background:#090545;
 // background: linear-gradient(90deg, rgba(64,57,166,1) 24%, rgba(66,112,158,1) 54%, rgba(67,63,140,1) 78%); 
 }
@@ -77,8 +77,11 @@ a {
 .gap-20 {
     gap: 20px;
 }
+.gap-100 {
+    gap:100px;
+}
 .gap-40 {
-    gap: 40px;
+    gap:40px;
 }
 .content
 {

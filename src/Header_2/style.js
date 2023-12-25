@@ -4,16 +4,18 @@ export const Style = styled.div`
   .container_left {
     width: 250px;
     height: 100vh;
-    border-right: 1px solid gray;
+    // border-right: 1px solid gray;
+    box-shadow: 5px 0 3px -3px #00000030;
   }
   .container_inner {
     margin-top:50px;
   }
   h1.title {
     color: black;
-    font-size: 55px;
+    font-size: 50px;
     text-align: center;
     font-family: "Lobster", sans-serif;
+    height:200px;
   }
   a {
     color: gray;
@@ -21,7 +23,8 @@ export const Style = styled.div`
     width: 100%;
     height: 65px;
     text-align:center;
-    background:#616963;
-    margin-top:20px;
+    color:black;
+    // background:#616963;
+    margin-top:10px;
   }
 `;

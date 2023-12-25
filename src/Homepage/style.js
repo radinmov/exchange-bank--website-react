@@ -1,32 +1,77 @@
 import styled from "styled-components";
 
 export const Style = styled.div`
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
+  display: flex;
   // height: 100vh;
   background: white;
+  .black {
+    color: black;
+  }
 
-  // .fh_card {
-  //   width: 400px;
-  //   height: 200px;
-  //   border-radius: 10px;
-  //   background: rgb(64, 57, 166);
-  //   background: linear-gradient(
-  //     90deg,
-  //     rgba(64, 57, 166, 1) 24%,
-  //     rgba(66, 112, 158, 1) 54%,
-  //     rgba(67, 63, 140, 1) 78%
-  //   );
-
-  //   .card {
-  //     .card_inner {
-  //       margin:10px;
-  //       h1 {
-  //         font-size: x-large;
-  //         text-transform: uppercase;
-  //       }
-  //     }
-  //   }
-  // }
+  .container_start {
+    width: 100%;
+    margin-left: 20px;
+  }
+  .container-start__inner {
+    width: 85%;
+  }
+  .int {
+    width: 120%;
+    height: 40px;
+    outline: 0;
+    border: none;
+    box-shadow: 0 4px 2px -2px gray;
+    margin-left: -20px;
+}
+  }
+  .add {
+    margin-top: 20px;
+    width: 90%;
+  }
+  .cir {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: gray;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+  }
+  .card {
+    width: 400px;
+    height: 250px;
+    background: #013f8a;
+    border-radius: 3px;
+  }
+  .card_inner {
+    position: relative;
+  }
+  .m-card {
+    font-size: 30px;
+    
+  }
+  .fh-card {
+    margin: 0 auto;
+    margin-top: 158px;
+  }
+  .test {
+    width: 75px;
+    background: white;
+    position: absolute;
+    right: 18px;
+    top: 306%;
+  }
+  .nm {
+    color: whitesmoke;
+    position: absolute;
+    top: 150px;
+    margin-left: 16px;
+}
+  .test-2 {
+    width: 100px;
+    margin: 10px;
+  }
 `;
