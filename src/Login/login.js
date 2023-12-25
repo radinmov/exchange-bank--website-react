@@ -3,7 +3,6 @@ import { Style } from "./Style";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
 
-let ali = document.getElementsByClassName("int").value;
 export default function Login() {
   const [userName, setUser] = useState();
   const [pas, setPasCode] = useState();

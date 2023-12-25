@@ -11,6 +11,7 @@ export default function Header_2() {
             <Link>OverView</Link>
             <Link>Profile</Link>
             <Link>Wallet</Link>
+            <Link to={"/action"}>Transaction</Link> 
         </div>
       </div>
       

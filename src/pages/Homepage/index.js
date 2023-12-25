@@ -1,16 +1,16 @@
 import userEvent from "@testing-library/user-event";
 import { useState, useEffect, Fragment } from "react";
 import { Style } from "./style";
-import Header_2 from "../Header_2";
-import "./index.css";
+import Header_2 from "../../Header_2";
 
 export default function Homepage() {
   const [amout, setAmount] = useState();
   const [account, setAccount] = useState();
   const [name, setName] = useState();
+  const [transaction,setTransaction]  =useState([]);
 
-  useEffect(() => {
-    fetch("https://cacore.liara.run/auth/users/me", {
+  const getTransations = () => {
+    fetch("https://cacore.liara.run/bank/transactions/", {
       headers: {
         "Content-Type": "application/json",
         Authorization: "JWT " + localStorage.getItem("Access"),
@@ -18,10 +18,20 @@ export default function Homepage() {
     })
       .then((response) => response.json())
       .then((result) => {
+        setTransaction(result)
         console.log(result);
-        setName(result.email);
+
       })
       .catch((err) => console.log(err));
+  }
+
+  useEffect(() => {
+    getTransations();
+  }, [])
+
+
+  useEffect(() => {
+    
 
     fetch("https://cacore.liara.run/bank/asset", {
       headers: {
@@ -36,7 +46,21 @@ export default function Homepage() {
         setAmount(result.amount);
       })
       .catch((err) => console.log(err));
+
+      fetch("https://cacore.liara.run/bank/transactions/", {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "JWT " + localStorage.getItem("Access"),
+        },
+      })
+        .then((response) => response.json())
+        .then((result) => {
+          console.log(result);
+
+        })
+        .catch((err) => console.log(err));
   }, []);
+
   return (
     <Style>
       <Header_2 />
@@ -54,8 +78,9 @@ export default function Homepage() {
             <div className="card">
               <div className="card_inner">
                 <img className="test-2" src="assets/images/home/maste3r.png" />
-                <img className="test" src="assets/images/home/visa.png" />
+                {/* <img className="test" src="assets/images/home/visa.png" /> */}
                 <p className="nm">{name}</p>
+                <p>{amout}</p>
               </div>
             </div>
             {/* <div className="card">
@@ -65,6 +90,17 @@ export default function Homepage() {
             </div> */}
           </div>
         </div>
+      </div>
+
+
+      <div>
+        {
+          transaction.length > 0 && transaction.map( (item) =>  {
+            return (
+              <div>{item.amount}</div>
+            )            
+          })
+        }
       </div>
     </Style>
   );
