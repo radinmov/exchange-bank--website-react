@@ -1,4 +1,5 @@
 import { Fragment, useState } from "react";
+import { Style } from "./Style";
 
 export default function Action() {
   const [amount, setAmount] = useState();
@@ -14,7 +15,7 @@ export default function Action() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "JWT " + localStorage.getItem("Access"),
+        Authorization: "JWT " + localStorage.getItem("Access"),
       },
       body: data,
     })
@@ -23,22 +24,11 @@ export default function Action() {
         console.log(result);
       })
       .catch((err) => console.log(err));
-
-    // fetch("https://cacore.liara.run/bank/asset", {
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //     Authorization: "JWT " + localStorage.getItem("Access"),
-    //   },
-    // })
-    //   .then((response) => response.json())
-    //   .then((result) => {
-    //     console.log(result);
-    //   })
-    //   .catch((err) => console.log(err));
   }
 
   return (
-    <Fragment>
+    <Style >
+      <div className="container-2" >
       <input
         onChange={(e) => {
           setAmount(e.target.value);
@@ -49,9 +39,10 @@ export default function Action() {
         onChange={(e) => {
           setDestination(e.target.value);
         }}
-        placeholder="enter destianmn account "
+        placeholder="enter destianmn account"
       />
-      <button onClick={postData}>post</button>
-    </Fragment>
+      <button onClick={postData}>Transfer</button>
+      </div>
+    </Style>
   );
 }
