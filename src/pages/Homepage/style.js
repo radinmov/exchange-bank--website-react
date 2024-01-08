@@ -7,13 +7,15 @@ export const Style = styled.div`
   .black {
     color: black;
   }
-
+  .container_start input {
+  
+    margin-left: 0.5px;
+  }
   .container_start {
     width: 100%;
-    margin-left: 20px;
   }
   .container-start__inner {
-    width: 85%;
+    width: 100%;
   }
   .int {
     width: 120%;
@@ -73,5 +75,15 @@ export const Style = styled.div`
   .test-2 {
     width: 100px;
     margin: 10px;
+  }
+  .bg {
+    width:100%; 
+    
+    background :blue ;
+  }
+  .mg {
+    width:100%;
+   border:1px solid #000;
+   
   }
 `;
