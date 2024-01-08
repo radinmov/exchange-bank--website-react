@@ -14,4 +14,10 @@ export const Style = styled.div`
     width: 90%;
     height: 30px;
   }
+  input {
+    color: #000;
+  }
+  .bg {
+    background :blue;
+  }
 `;

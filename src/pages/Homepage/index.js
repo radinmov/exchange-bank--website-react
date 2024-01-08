@@ -89,19 +89,24 @@ export default function Homepage() {
               </div>
             </div> */}
           </div>
-        </div>
-      </div>
-
-
-      <div>
+      <div className=" bg flex gap-10">
         {
           transaction.length > 0 && transaction.map( (item) =>  {
             return (
+              <>
+            
               <div>{item.amount}</div>
+              <div>{item.destination_account}</div>
+              
+              </>
             )            
           })
         }
       </div>
+        </div>
+      </div>
+
+
     </Style>
   );
 }
