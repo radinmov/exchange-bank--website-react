@@ -1,13 +1,13 @@
 import userEvent from "@testing-library/user-event";
 import { useState, useEffect, Fragment } from "react";
-import { Style } from "./style";
+import { Style } from "./Style";
 import Header_2 from "../../Header_2";
 
 export default function Homepage() {
   const [amout, setAmount] = useState();
   const [account, setAccount] = useState();
   const [name, setName] = useState();
-  const [transaction,setTransaction]  =useState([]);
+  const [transaction, setTransaction] = useState([]);
 
   const getTransations = () => {
     fetch("https://cacore.liara.run/bank/transactions/", {
@@ -18,21 +18,17 @@ export default function Homepage() {
     })
       .then((response) => response.json())
       .then((result) => {
-        setTransaction(result)
+        setTransaction(result);
         console.log(result);
-
       })
       .catch((err) => console.log(err));
-  }
+  };
 
   useEffect(() => {
     getTransations();
-  }, [])
-
+  }, []);
 
   useEffect(() => {
-    
-
     fetch("https://cacore.liara.run/bank/asset", {
       headers: {
         "Content-Type": "application/json",
@@ -47,18 +43,17 @@ export default function Homepage() {
       })
       .catch((err) => console.log(err));
 
-      fetch("https://cacore.liara.run/bank/transactions/", {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "JWT " + localStorage.getItem("Access"),
-        },
+    fetch("https://cacore.liara.run/bank/transactions/", {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "JWT " + localStorage.getItem("Access"),
+      },
+    })
+      .then((response) => response.json())
+      .then((result) => {
+        console.log(result);
       })
-        .then((response) => response.json())
-        .then((result) => {
-          console.log(result);
-
-        })
-        .catch((err) => console.log(err));
+      .catch((err) => console.log(err));
   }, []);
 
   return (
@@ -83,28 +78,29 @@ export default function Homepage() {
               </div>
             </div>
           </div>
-      <div className="bg ">
-        <div className="fh flex  justify-center gap-40 " >
-        <p className="amn">Amount</p>
-        <p>Destination</p>
-        </div>
-        {
-          transaction.length > 0 && transaction.map( (item) =>  {
-            return (
-              <Style > 
-              <div className="fh_details flex  justify-center  gap-10  mg" >
-              <div>{item.amount}$</div>
-              <div >{item.destination_account}</div>
-              </div>
-              </Style>
-            )            
-          })
-        }
-      </div>
-        </div>
-      </div>
+          <div className="bg ">
+            <div className="fh flex  justify-center gap-40 ">
+              <p className="amn">Amount</p>
+              <p>Destination</p>
+            </div>
+            {transaction.length > 0 &&
+              transaction.map((item) => {
+                const operationColor =
+                  item.operation === "send" ? "red" : "green";
 
-
+                return (
+                  <Style >
+                    <div className="fh_details flex justify-center gap-10 mg">
+                      <div>{item.amount}$</div>
+                      <div>{item.destination_account}</div>
+                      <p style={{ color: operationColor }}>{item.operation}</p>
+                    </div>
+                  </Style>
+                );
+              })}
+          </div>
+        </div>
+      </div>
     </Style>
   );
 }
