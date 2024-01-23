@@ -4,6 +4,7 @@ export const Style = styled.div`
   .container_left {
     width: 250px;
     height: 100vh;
+    
     // border-right: 1px solid gray;
     box-shadow: 5px 0 3px -3px #00000030;
   }

@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom";
 import { Style } from "./style";
 import { useNavigate } from "react-router-dom";
+import useTitle from "../Hook/useTitle";
 export default function NotFound() {
   const navigate = useNavigate();
+  const title = useTitle("NotFound(404)");
 
-  function handlenavigate() {
-    navigate("/");
-  }
-  function handle2() {
-    navigate("/home");
-  }
   return (
     <Style>
       <div id="error-page">
@@ -22,11 +18,25 @@ export default function NotFound() {
             <h2>Code-Academy Develop part</h2>
           </h4>
 
-          <p>Alborz Develop part  </p>
+          <p>Alborz Develop part </p>
 
           <div className="btns">
-            <button className="btn" onClick={handlenavigate}>Return to Login </button>
-            <button className="btn" onClick={handle2}>Return to Homepage </button>
+            <button
+              className="btn"
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              Return to Login{" "}
+            </button>
+            <button
+              className="btn"
+              onClick={() => {
+                navigate("/home");
+              }}
+            >
+              Return to Homepage{" "}
+            </button>
           </div>
         </div>
       </div>

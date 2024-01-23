@@ -7,7 +7,7 @@ body, button, input {
     font-family: 'Roboto', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     border:none;
-    background:inherit; 
+    // background:inherit; 
     color:#fff;
     font-weight:bolder; 
 

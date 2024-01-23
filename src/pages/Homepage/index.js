@@ -2,8 +2,10 @@ import userEvent from "@testing-library/user-event";
 import { useState, useEffect, Fragment } from "react";
 import { Style } from "./Style";
 import Header_2 from "../../Header_2";
+import useTitle from "../../Hook/useTitle";
 
 export default function Homepage() {
+  const title  = useTitle('Home')
   const [amout, setAmount] = useState();
   const [account, setAccount] = useState();
   const [name, setName] = useState();
@@ -55,7 +57,6 @@ export default function Homepage() {
       })
       .catch((err) => console.log(err));
   }, []);
-
   return (
     <Style>
       <Header_2 />
@@ -78,7 +79,7 @@ export default function Homepage() {
               </div>
             </div>
           </div>
-          <div className="bg ">
+          <div className="bg " style={{marginTop:"50px"}}>
             <div className="fh flex  justify-center gap-40 ">
               <p className="amn">Amount</p>
               <p>Destination</p>

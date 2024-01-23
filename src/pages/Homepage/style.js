@@ -78,6 +78,7 @@ export const Style = styled.div`
   }
   .bg {
     width:100%; 
+    margin-top:50px;
     
     background :blue ;
   }

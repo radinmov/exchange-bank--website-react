@@ -1,7 +1,12 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { Style } from "./Style";
+import useTitle from "../../Hook/useTitle";
+import Header from "../../Header";
+
+
 
 export default function Action() {
+  const title =  useTitle('Transaction')
   const [amount, setAmount] = useState();
   const [destination, setDestination] = useState();
 
@@ -27,21 +32,30 @@ export default function Action() {
   }
 
   return (
-    <Style >
-      <div className="container-2" >
-      <input
-        onChange={(e) => {
-          setAmount(e.target.value);
-        }}
-        placeholder="enter the amount"
-      />
-      <input
-        onChange={(e) => {
-          setDestination(e.target.value);
-        }}
-        placeholder="enter destianmn account"
-      />
-      <button onClick={postData}>Transfer</button>
+    <Style>
+      <Header />
+      <div className="container_fh" >
+      <div className="container-2">
+        <div className="container_inner">
+          <p className="txt">Transaction page </p>
+          <input
+            inputmode="numeric"
+            type="number"
+            onChange={(e) => {
+              setAmount(e.target.value);
+            }}
+            placeholder="Enter the amount"
+          />
+          <input
+            type="number"
+            onChange={(e) => {
+              setDestination(e.target.value);
+            }}
+            placeholder="Enter Destianmn account"
+          />
+          <button className="btn_ac" onClick={postData}>Transfer</button>
+        </div>
+      </div>
       </div>
     </Style>
   );

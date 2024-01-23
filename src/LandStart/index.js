@@ -1,8 +1,10 @@
 import { Style } from "./style";
 import "./index.css"
 import { useNavigate } from "react-router-dom";
+import useTitle from "../Hook/useTitle";
 
 export default function LandStart() {
+    const title = useTitle('Landing')
     const navigate = useNavigate();
     return (
         <Style>

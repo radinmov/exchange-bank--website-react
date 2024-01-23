@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Style = styled.div`
   body {
-    background-image: linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
+    // background-image: linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
+    background-image:url("https://img.freepik.com/premium-vector/banking-service-background-bank-building-icon-made-with-currency-symbols-dollar-euro-yen-pound-icons_127544-803.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705881600&semt=ais");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

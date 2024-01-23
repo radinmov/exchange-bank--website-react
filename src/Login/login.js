@@ -2,8 +2,11 @@ import { useState } from "react";
 import { Style } from "./Style";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
+import { useTheme } from "styled-components";
+import useTitle from "../Hook/useTitle";
 
 export default function Login() {
+  const title  = useTitle('Login')
   const [userName, setUser] = useState();
   const [pas, setPasCode] = useState();
   const [loading, setLoading] = useState(false);
