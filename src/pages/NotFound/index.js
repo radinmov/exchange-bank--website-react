@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Style } from "./style";
 import { useNavigate } from "react-router-dom";
-import useTitle from "../Hook/useTitle";
+import useTitle from "../../componets/Hook/useTitle";
 export default function NotFound() {
   const navigate = useNavigate();
   const title = useTitle("NotFound(404)");

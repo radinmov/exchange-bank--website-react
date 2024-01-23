@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Style } from "./Style";
-import useTitle from "../../Hook/useTitle";
-import Header from "../../Header";
+import useTitle from "../../componets/Hook/useTitle";
+import Header from "../../componets/Header";
 
 
 
