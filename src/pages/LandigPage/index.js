@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import Header from "../../Header";
-import LandStart from "../../LandStart";
+import Header from "../../componets/Header";
+import LandStart from "../../pages/LandStart";
 
 
 

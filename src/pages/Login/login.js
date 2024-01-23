@@ -3,7 +3,7 @@ import { Style } from "./Style";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
 import { useTheme } from "styled-components";
-import useTitle from "../Hook/useTitle";
+import useTitle from "../../componets/Hook/useTitle";
 
 export default function Login() {
   const title  = useTitle('Login')

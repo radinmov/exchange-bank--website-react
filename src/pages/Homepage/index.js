@@ -1,8 +1,8 @@
-import userEvent from "@testing-library/user-event";
+
 import { useState, useEffect, Fragment } from "react";
 import { Style } from "./Style";
-import Header_2 from "../../Header_2";
-import useTitle from "../../Hook/useTitle";
+import Header_2 from "../../componets/Header";
+import useTitle from "../../componets/Hook/useTitle";
 
 export default function Homepage() {
   const title  = useTitle('Home')
