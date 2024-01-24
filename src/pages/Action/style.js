@@ -33,9 +33,12 @@ export const Style = styled.div`
   .btn_ac:hover {
     background: red;
   }
-  input {
+  .int_1 , int_2 {
     width: 90%;
-    margin-top: 50px;
+  }
+  input.clas {
+    border:1px solid #000;
+    
     color: #000;
     outline: 0;
   }

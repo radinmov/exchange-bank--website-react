@@ -123,4 +123,11 @@ a {
       }
     }
     }
+    .hiddin {
+        overflow:hidden;
+    }
+    op-0 {
+        opcity:0;
+    }
+    @media 
 `;

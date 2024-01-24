@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const Style = styled.div`
   display: flex;
-  // height: 100vh;
+  height: 100vh;
   background: white;
   .black {
     color: black;
   }
   .container_start input {
-  
     margin-left: 0.5px;
   }
   .container_start {

@@ -1,7 +1,7 @@
 
 import { useState, useEffect, Fragment } from "react";
 import { Style } from "./Style";
-import Header_2 from "../../componets/Header";
+import Header_2 from "../../componets/Header_2";
 import useTitle from "../../componets/Hook/useTitle";
 
 export default function Homepage() {
@@ -60,6 +60,7 @@ export default function Homepage() {
   return (
     <Style>
       <Header_2 />
+
       <div className="container_start black">
         <div className="container-start__inner">
           <input className="int" placeholder="Serach" />
