@@ -1,11 +1,10 @@
-
 import { useState, useEffect, Fragment } from "react";
 import { Style } from "./Style";
 import Header_2 from "../../componets/Header_2";
 import useTitle from "../../componets/Hook/useTitle";
 
 export default function Homepage() {
-  const title  = useTitle('Home')
+  const title = useTitle("Home");
   const [amout, setAmount] = useState();
   const [account, setAccount] = useState();
   const [name, setName] = useState();
@@ -80,7 +79,7 @@ export default function Homepage() {
               </div>
             </div>
           </div>
-          <div className="bg " style={{marginTop:"50px"}}>
+          <div className="bg " style={{ marginTop: "50px" }}>
             <div className="fh flex  justify-center gap-40 ">
               <p className="amn">Amount</p>
               <p>Destination</p>
@@ -91,7 +90,7 @@ export default function Homepage() {
                   item.operation === "send" ? "red" : "green";
 
                 return (
-                  <Style >
+                  <Style>
                     <div className="fh_details flex justify-center gap-10 mg">
                       <div>{item.amount}$</div>
                       <div>{item.destination_account}</div>

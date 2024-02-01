@@ -26,7 +26,7 @@ export default function Action() {
       .then((result) => {
         console.log(result);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert(err));
   }
 
   return (
