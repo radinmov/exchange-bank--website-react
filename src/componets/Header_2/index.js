@@ -9,7 +9,7 @@ export default function Header_2() {
             <h1 className="title">Alborz Bank </h1>
         <div className="container_inner">
             <Link>OverView</Link>
-            <Link>Profile</Link>
+            <Link to={"/login"}>Profile</Link>
             <Link>Wallet</Link>
             <Link to={"/action"}>Transaction</Link> 
         </div>

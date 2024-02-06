@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Style = styled.div`
   display: flex;
   // height: 100vh; 
+  background-image: url("https://www.indiafilings.com/learn/wp-content/uploads/2020/09/shutterstock_1529380166.jpg");
   // width:30%;
   margin:0 auto;
   background: white;
@@ -26,7 +27,6 @@ export const Style = styled.div`
     box-shadow: 0 4px 2px -2px gray;
     margin-left: -20px;
 }
-  }
   .add {
     margin-top: 20px;
     width: 90%;
@@ -43,11 +43,13 @@ export const Style = styled.div`
     align-items: center;
     margin-left: 5px;
   }
+
   .card {
     width: 400px;
     height: 250px;
     background: #013f8a;
-    border-radius: 3px;
+    border-radius: 6.9999px;
+
   }
   .card_inner {
     position: relative;

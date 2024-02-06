@@ -13,7 +13,7 @@ export default function Header() {
                 </div>
             </div>
             <div className="left flex mr-4">
-                <button onClick={() => {navigate("/")}} className="mr-4 text-xl">Home</button>
+                <button onClick={() => {navigate("/home")}} className="mr-4 text-xl">Home</button>
                 <button className="mr-4 text-xl"> service</button>
                 <button onClick={()  => { navigate("/action")}}  className="mr-4 text-xl">Transaction</button>
             <Link target="__blanck" to={"http://ins-alborz.com"}>    

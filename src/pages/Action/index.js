@@ -59,8 +59,8 @@ export default function Action() {
               placeholder="Enter Destianmn account"
             />
             </div>
-            <button className="btn_ac" onClick={postData}>
-              Transfer
+            <button className="btn_ac " onClick={postData}>
+              <img src="assets/public_icons/send.png" />
             </button>
           </div>
         </div>
