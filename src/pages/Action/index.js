@@ -37,7 +37,7 @@ export default function Action() {
           <div className="container_inner">
             <p className="txt">Transaction page </p>'
             <div className="int_1" >
-            <p style={{color:"black" , textAlign:"left"}}>Enter you amount</p>
+            {/* <p style={{color:"black" , textAlign:"left"}}>Enter you amount</p> */}
             <input
               className="clas"
               inputmode="numeric"
@@ -49,7 +49,7 @@ export default function Action() {
             />
             </div>
             <div className="int_2" >
-            <p style={{color:"black" , textAlign:"left"}}>Enter Destianmn account</p>
+            {/* <p style={{color:"black" , textAlign:"left"}}>Enter Destianmn account</p> */}
             <input
               className="clas"
               type="text"

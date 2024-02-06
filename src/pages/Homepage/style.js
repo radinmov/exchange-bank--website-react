@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Style = styled.div`
   display: flex;
-  height: 100vh;
+  // height: 100vh; 
+  // width:30%;
+  margin:0 auto;
   background: white;
   .black {
     color: black;
@@ -17,7 +19,7 @@ export const Style = styled.div`
     width: 100%;
   }
   .int {
-    width: 120%;
+    // width: 120%;
     height: 40px;
     outline: 0;
     border: none;

@@ -58,7 +58,7 @@ export default function Homepage() {
   }, []);
   return (
     <Style>
-      <Header_2 />
+      {/* <Header_2 /> */}
 
       <div className="container_start black">
         <div className="container-start__inner">

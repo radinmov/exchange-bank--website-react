@@ -9,7 +9,7 @@ export default function Header() {
         <div className="header flex align-center space-between ">
             <div className="right">
                 <div className="logo">
-                    <h3 className="ml-4 text-xl ali">Code - Academy </h3>
+                    <h3 className="ml-4 text-xl ali text-black ">Code - Academy </h3>
                 </div>
             </div>
             <div className="left flex mr-4">

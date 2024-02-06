@@ -16,7 +16,9 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     // color: #fff;
-    background:#090545;
+    // background:#090545;
+    width:30%;
+    margin:0 auto;
 // background: linear-gradient(90deg, rgba(64,57,166,1) 24%, rgba(66,112,158,1) 54%, rgba(67,63,140,1) 78%); 
 }
 ul , ol {
@@ -33,6 +35,7 @@ a {
 .full-container {
    width: 100%;
    padding: 0 16px;
+
 }
 .container {
    width: 100%;

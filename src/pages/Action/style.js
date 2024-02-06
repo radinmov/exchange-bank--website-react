@@ -5,7 +5,7 @@ export const Style = styled.div`
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 100vh;
-  background-image: url("https://img.freepik.com/premium-vector/banking-service-background-bank-building-icon-made-with-currency-symbols-dollar-euro-yen-pound-icons_127544-803.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705881600&semt=ais");
+  background-image: url("https://www.indiafilings.com/learn/wp-content/uploads/2020/09/shutterstock_1529380166.jpg");
   .container_fh {
     height: 75vh;
     display: flex;
@@ -37,7 +37,7 @@ export const Style = styled.div`
     width: 90%;
   }
   input.clas {
-    border:1px solid #000;
+    // border:1px solid #000;
     
     color: #000;
     outline: 0;
