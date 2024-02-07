@@ -57,7 +57,7 @@ export default function Homepage() {
         console.log(result);
       })
       .catch((err) => console.log(err));
-  }, []);``
+  }, []);
   return (
     <Style>
       <Header_2 />
