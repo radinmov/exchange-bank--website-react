@@ -63,15 +63,24 @@ export default function Homepage() {
       <Header_2 />
 
       <div className="container_start black">
-        <div className="container-start__inner">
+            <div className="person_info w-72 h-20 relative rounded  bg-emerald-700 ">
+                  <div className="person_info_inner">
+                    {/* <p className="text-white alk  ">person_info</p> */}
+                    <div className="avater">
+                      <div className="avatar_info">
+                          <img src="assets/public_icons/avatar.png" />
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        <div className="container-start__inner w-full">
           <div className="fh-card flex justify-center gap-100">
             <div className="card">
               <div className="card_inner">
                 <img className="test-2" src="assets/images/home/maste3r.png" />
                 <p className="nm">{name}</p>
-                <h1 className="flex justify-center" style={{color:"white"}}>{account}</h1>
-                <p>UserId:{id}</p>
-                <p>{amout}$</p>
+                <h1 className="flex txt_2 justify-center text-xl text-white">{account}</h1>
+                <p className="text-white text-xl ">{amout}$</p>
               </div>
             </div>
           </div>

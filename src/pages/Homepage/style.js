@@ -2,9 +2,7 @@ import styled from "styled-components";
 
 export const Style = styled.div`
   display: flex;
-  // height: 100vh; 
   background-image: url("https://www.indiafilings.com/learn/wp-content/uploads/2020/09/shutterstock_1529380166.jpg");
-  // width:30%;
   margin:0 auto;
   background: white;
   .black {
@@ -16,11 +14,7 @@ export const Style = styled.div`
   .container_start {
     width: 100%;
   }
-  .container-start__inner {
-    width: 100%;
-  }
   .int {
-    // width: 120%;
     height: 40px;
     outline: 0;
     border: none;
@@ -43,13 +37,11 @@ export const Style = styled.div`
     align-items: center;
     margin-left: 5px;
   }
-
   .card {
     width: 400px;
     height: 250px;
     background: #013f8a;
     border-radius: 6.9999px;
-
   }
   .card_inner {
     position: relative;
@@ -88,6 +80,12 @@ export const Style = styled.div`
   .mg {
     width:100%;
    border:1px solid #000;
-   
+  }
+  .txt_2 {
+    letter-spacing: 0.400em;
+  }
+  .alk {
+    width:100px;
+    height:100px;
   }
 `;
