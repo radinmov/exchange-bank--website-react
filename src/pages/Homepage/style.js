@@ -84,8 +84,4 @@ export const Style = styled.div`
   .txt_2 {
     letter-spacing: 0.400em;
   }
-  .alk {
-    width:100px;
-    height:100px;
-  }
 `;

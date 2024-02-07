@@ -57,22 +57,24 @@ export default function Homepage() {
         console.log(result);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, []);``
   return (
     <Style>
       <Header_2 />
 
       <div className="container_start black">
-            <div className="person_info w-72 h-20 relative rounded  bg-emerald-700 ">
-                  <div className="person_info_inner">
-                    {/* <p className="text-white alk  ">person_info</p> */}
-                    <div className="avater">
-                      <div className="avatar_info">
-                          <img src="assets/public_icons/avatar.png" />
-                      </div>
-                    </div>
-                  </div>
+        <div className="person_info w-72 h-20 relative rounded  bg-emerald-700 ">
+          <div className="person_info_inner flex ">
+            <div className="avater ">
+              <div className="avatar_info">
+                <img src="assets/public_icons/avatar.png" />
+              </div>
             </div>
+            <div className="info_txt" >
+              <p className="text-white alk m-2 ">{account}</p>
+            </div>
+          </div>
+        </div>
         <div className="container-start__inner w-full">
           <div className="fh-card flex justify-center gap-100">
             <div className="card">
