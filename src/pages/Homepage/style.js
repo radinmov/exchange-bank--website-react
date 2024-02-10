@@ -82,6 +82,6 @@ export const Style = styled.div`
    border:1px solid #000;
   }
   .txt_2 {
-    letter-spacing: 0.400em;
+    letter-spacing: 0.600em;
   }
 `;

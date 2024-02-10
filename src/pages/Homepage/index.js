@@ -2,6 +2,7 @@ import { useState, useEffect, Fragment } from "react";
 import { Style } from "./Style";
 import Header_2 from "../../componets/Header_2";
 import useTitle from "../../componets/Hook/useTitle";
+import Info from "../../componets/person_info";
 
 export default function Homepage() {
   const title = useTitle("Home");
@@ -63,26 +64,15 @@ export default function Homepage() {
       <Header_2 />
 
       <div className="container_start black">
-        <div className="person_info w-72 h-20 relative rounded  bg-emerald-700 ">
-          <div className="person_info_inner flex ">
-            <div className="avater ">
-              <div className="avatar_info">
-                <img src="assets/public_icons/avatar.png" />
-              </div>
-            </div>
-            <div className="info_txt" >
-              <p className="text-white alk m-2 ">{account}</p>
-            </div>
-          </div>
-        </div>
+        <Info />
         <div className="container-start__inner w-full">
           <div className="fh-card flex justify-center gap-100">
             <div className="card">
               <div className="card_inner">
                 <img className="test-2" src="assets/images/home/maste3r.png" />
                 <p className="nm">{name}</p>
-                <h1 className="flex txt_2 justify-center text-xl text-white">{account}</h1>
                 <p className="text-white text-xl ">{amout}$</p>
+                <h1 className="flex mt-8 txt_2 justify-center text-xl text-white">{account}</h1>
               </div>
             </div>
           </div>

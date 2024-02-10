@@ -2,13 +2,19 @@ import { useState } from "react";
 import { Style } from "./Style";
 import useTitle from "../../componets/Hook/useTitle";
 import Header from "../../componets/Header";
+import Info from "../../componets/person_info";
 
 export default function Action() {
   const title = useTitle("Transaction");
-  const [amount, setAmount] = useState();
-  const [destination, setDestination] = useState();
+  const [amount, setAmount] = useState("");
+  const [destination, setDestination] = useState("");
 
   function postData() {
+    if (!amount.trim() || !destination.trim()) {
+      alert("Please fill all inputs Thanks!");
+      return;
+    }
+
     var data = JSON.stringify({
       amount: amount,
       destination_account: destination,
@@ -26,12 +32,13 @@ export default function Action() {
       .then((result) => {
         console.log(result);
       })
-      .catch((err) => alert(err));
+      .catch((err) => console.log(err));
   }
 
   return (
     <Style>
       <Header />
+      <Info />
       <div className="container_fh">
         <div className="container-2">
           <div className="container_inner">
@@ -42,6 +49,7 @@ export default function Action() {
               className="clas"
               inputmode="numeric"
               type="text"
+              value={amount}
               onChange={(e) => {
                 setAmount(e.target.value);
               }}
@@ -49,14 +57,14 @@ export default function Action() {
             />
             </div>
             <div className="int_2" >
-            {/* <p style={{color:"black" , textAlign:"left"}}>Enter Destianmn account</p> */}
             <input
               className="clas"
               type="text"
+              value={destination}
               onChange={(e) => {
                 setDestination(e.target.value);
               }}
-              placeholder="Enter Destianmn account"
+              placeholder="Enter Destination account"
             />
             </div>
             <button className="btn_ac " onClick={postData}>
