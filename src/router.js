@@ -5,6 +5,8 @@ import NotFound from "./pages/NotFound";
 
 import Landig from "./pages/LandigPage";
 import Action from "./pages/Action";
+import Image from "./pages/json";
+
 
 
 const routes = createBrowserRouter([
@@ -28,6 +30,10 @@ const routes = createBrowserRouter([
   {
     path: "action",
     element: <Action />,
+  },
+  {
+    path: "json",
+    element: <Image />,
   },
 ]);
 
